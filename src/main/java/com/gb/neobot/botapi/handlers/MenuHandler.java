@@ -48,7 +48,7 @@ public class MenuHandler implements InputMessageHandler {
         } else if (user.getState() == BotState.MENU.ordinal() && inputMsg.getText().equals("Smart Subscribe")) {
             user.setState(BotState.SMART_SUBSCRIBE.ordinal());
             userService.updateUser(user);
-            message = buttonsService.getSmartSubscribeMessage(inputMsg.getChatId(), Icon.BALLOT.get()+" Выберите криптовалюту и установите % отклонение (+-1.2)");
+            message = buttonsService.getSmartSubscribeMessage(inputMsg.getChatId(), Icon.BALLOT.get()+" Выберите криптовалюту и установите % отклонения от курса ");
         } else if (user.getState() == BotState.MENU.ordinal() && inputMsg.getText().equals("My Subscribes")) {
             user.setState(BotState.MENU.ordinal());
             userService.updateUser(user);

@@ -60,12 +60,12 @@ public class SmartSubscribeHandler implements InputMessageHandler {
                         .setText(Icon.TRUE.get()+" Подписка установлена");
 
                 Coins.Bitki.Coin coin = coinsGetInfoService.getCoinByName(user.getSmartSubscribeCoin(), coinsGetInfoService.getAllCoins());
-                smartSubscribeService.addSmartSubscribe(new SmartSubscribe(user.getId(), user.getSmartSubscribeCoin(), coin.getQuote().getUSD().getPrice(), Double.parseDouble(inputMsg.getText()) / 100));
+                smartSubscribeService.addSmartSubscribe(new SmartSubscribe(user.getId(), user.getSmartSubscribeCoin(), coin.getQuote().getUSD().getPrice(), Double.parseDouble(inputMsg.getText())));
                 user.setState(BotState.MENU.ordinal());
                 userService.updateUser(user);
             } else {
                 message.setChatId(inputMsg.getChatId())
-                        .setText(Icon.EXCLA+"Неверный формат");
+                        .setText(Icon.EXCLA.get()+" Неверный формат");
             }
         }
 

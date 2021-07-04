@@ -92,7 +92,7 @@ public class TelegramFacade {
                 simpleSubscribeService.addSimpleSubscribe(new SimpleSubscribe(user.getId(), buttonQueryData.substring(buttonQueryData.indexOf('_') + 1)));
 
             }else if (buttonQueryData.substring(0, buttonQueryData.indexOf('_')).equals("buttonSmartSubscribe") && simpleSubscribeService.findByUserIdAndCoin(userId, buttonQueryData.substring(buttonQueryData.indexOf('_') + 1)) == null) {
-                callBackAnswer = new SendMessage(chatId, "Установите для " + buttonQueryData.substring(buttonQueryData.indexOf('_') + 1) + " - % отклонение (+-0.2)");
+                callBackAnswer = new SendMessage(chatId, "Установите для " + buttonQueryData.substring(buttonQueryData.indexOf('_') + 1) + " - % отклонение от курса");
                 user.setSmartSubscribeCoin(buttonQueryData.substring(buttonQueryData.indexOf('_') + 1));
                 userService.updateUser(user);
             }
