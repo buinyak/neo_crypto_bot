@@ -21,7 +21,6 @@ public class MenuHandler implements InputMessageHandler {
     public MenuHandler(UserService userService, ButtonsService buttonsService) {
         this.userService = userService;
         this.buttonsService = buttonsService;
-
     }
 
     @Override

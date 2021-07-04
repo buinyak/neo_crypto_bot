@@ -14,8 +14,6 @@ public class NeoTelegramBot extends TelegramWebhookBot {
     private String webHookPath;
     private String botUserName;
     private String botToken;
-
-
     private TelegramFacade telegramFacade;
 
     public NeoTelegramBot(DefaultBotOptions botOptions, TelegramFacade telegramFacade) {

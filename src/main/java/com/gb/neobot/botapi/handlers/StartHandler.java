@@ -38,7 +38,7 @@ public class StartHandler implements InputMessageHandler {
         }
         return new SendMessage()
                 .setChatId(inputMsg.getChatId())
-                .setText("Здравствуйте "+ inputMsg.getFrom().getUserName()+", мое имя Tetatet"+ Icon.ROBOT.get()+". Я готов помочь Вам с мониторингом стоймости криптовалют. Начнем?");
+                .setText("Здравствуйте "+ inputMsg.getFrom().getUserName()+", мое имя Tetatet"+ Icon.ROBOT.get()+". Я готов помочь Вам с мониторингом стоимости криптовалют. Начнем?");
 
     }
 }

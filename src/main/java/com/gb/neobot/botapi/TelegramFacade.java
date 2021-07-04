@@ -7,7 +7,6 @@ import com.gb.neobot.model.SimpleSubscribe;
 import com.gb.neobot.model.User;
 import com.gb.neobot.service.*;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.meta.api.methods.BotApiMethod;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
@@ -17,7 +16,6 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 
 @Component
 @Slf4j
-@EnableScheduling
 public class TelegramFacade {
     private final BotStateContext botStateContext;
     private final UserService userService;

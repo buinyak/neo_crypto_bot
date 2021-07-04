@@ -44,7 +44,7 @@ public class SmartSubscribeHandler implements InputMessageHandler {
     private SendMessage processUsersInput(Message inputMsg) {
         User user = userService.findByChatId(inputMsg.getChatId());
         SendMessage message = new SendMessage();
-        if (user.getState() == BotState.SMART_SUBSCRIBE.ordinal() && inputMsg.getText().equals(Icon.EXCLA+" My Subscribes")) {
+        if (user.getState() == BotState.SMART_SUBSCRIBE.ordinal() && inputMsg.getText().equals("My Subscribes")) {
             user.setState(BotState.MENU.ordinal());
             userService.updateUser(user);
             message = buttonsService.getDeleteSubscribeMessage(user.getId(), inputMsg.getChatId(), Icon.CHART.get()+" Ваши подписки:");
